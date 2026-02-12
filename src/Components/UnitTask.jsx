@@ -9,7 +9,7 @@ const UnitTask = ({task}) => {
   return (
     <div className="flex items-center justify-between p-4 mb-3 bg-gray-800 border border-gray-700 rounded-xl shadow-sm hover:shadow-md transition-all group">
       <div className="flex items-center gap-1 pr-3">
-        <button onClick={() => btnhandler(task.id)} className="shrink-0">
+        <button onClick={() => btnhandler(task)} className="shrink-0">
           {task.completed === true ? (
             <IoMdCheckmarkCircleOutline className="text-green-400" />
           ) : (
