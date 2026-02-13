@@ -11,16 +11,7 @@ export function TaskContextProvider({ children }) {
 
   console.log(Tasks);
   console.log(CompTask);
-  //   const filterData = [
-  //     {
-  //       id: 1,
-  //       category: "all",
-  //     },
-  //     {
-  //       id: 2,
-  //       category: "complete",
-  //     },
-  //   ];
+
 
   const btnhandler = useCallback((mtask) => {
     // This operation is done explicitely to pass the value in thhe second set-Operation...
