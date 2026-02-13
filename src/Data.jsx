@@ -5,10 +5,6 @@ export const filterData = [
   },
   {
     id: 2,
-    category: "active",
-  },
-  {
-    id: 3,
     category: "complete",
   },
 ];

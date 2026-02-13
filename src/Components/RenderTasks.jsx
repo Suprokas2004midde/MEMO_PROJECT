@@ -1,11 +1,12 @@
-import React, { useContext, useMemo } from "react";
+import React, { useContext, useMemo, memo } from "react";
 import { TaskContext } from "../Context/TaskContext";
 import UnitTask from "./UnitTask";
+import { filterData } from "../Data";
 
 const RenderTasks = () => {
-  const { Tasks, filterData, setcategory, category, CompTask } = useContext(TaskContext);
-  console.log(Tasks);
-  console.log(CompTask);
+  const { Tasks, setcategory, category, CompTask } = useContext(TaskContext);
+  // console.log(Tasks);
+  // console.log(CompTask);
   // const categoryvalue = useMemo(
   //   (category) => {
   //     return category;

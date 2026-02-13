@@ -1,12 +1,12 @@
 import { useContext, useState, useEffect } from "react";
 import "./App.css";
 import { toast } from "react-toastify";
-import { TaskContext } from "./Context/TaskContext";
+
 import RenderSearch from "./Components/RenderSearch";
 import RenderTasks from "./Components/RenderTasks";
 
 function App() {
-  // const{Tasks} = useContext(TaskContext);
+
 
   return (
     <div className="min-h-screen bg-[#121212] text-gray-100 font-sans selection:bg-blue-500/30">
