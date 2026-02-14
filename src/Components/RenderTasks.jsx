@@ -4,6 +4,7 @@ import UnitTask from "./UnitTask";
 import { filterData } from "../Data";
 
 const RenderTasks = () => {
+  console.log("🔴 RenderTasks ACTUALLY re-rendered");
   const { Tasks, setcategory, category, CompTask } = useContext(TaskContext);
   return (
     <>

@@ -9,8 +9,8 @@ export function TaskContextProvider({ children }) {
   const [CompTask, SetCompTask] = useState([]);
   const [category, setcategory] = useState("all");
 
-  console.log(Tasks);
-  console.log(CompTask);
+  // console.log(Tasks);
+  // console.log(CompTask);
 
 
   const btnhandler = useCallback((mtask) => {

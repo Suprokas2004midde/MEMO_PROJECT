@@ -3,6 +3,7 @@ import { TaskContext } from "../Context/TaskContext";
 import { toast } from "react-toastify";
 
 const SearchBox = ({ children }) => {
+  console.log("🟢 SearchBox ACTUALLY re-rendered");
   const { Settasks } = useContext(TaskContext);
   const [NewData, Setnewdata] = useState({
     task_name: " ",
