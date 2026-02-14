@@ -3,6 +3,8 @@ import { createContext, useCallback, useMemo, useState } from "react";
 //Create context
 export const TaskContext = createContext();
 
+export const TaskActionContext = createContext();
+
 //
 export function TaskContextProvider({ children }) {
   const [Tasks, Settasks] = useState([]);
@@ -52,10 +54,21 @@ export function TaskContextProvider({ children }) {
     });
   }, []);
 
+  const filterData = useMemo(
+    () => [
+      { id: 1, category: "all" },
+      { id: 2, category: "complete" },
+    ],
+    []
+  );
+
+  const  action_value = useMemo(()=>(
+    {Settasks}
+  ),[]);
+
   const value = useMemo(
     () => ({
       Tasks,
-      Settasks,
       CompTask,
       SetCompTask,
       btnhandler,
@@ -67,5 +80,11 @@ export function TaskContextProvider({ children }) {
     [Tasks, CompTask, category, btnhandler, cancelHandler],
   );
 
-  return <TaskContext.Provider value={value}>{children}</TaskContext.Provider>;
+  return (
+  <TaskContext.Provider value={value}>
+    <TaskActionContext.Provider value={action_value}>
+      {children}
+    </TaskActionContext.Provider>
+  </TaskContext.Provider>
+  );
 }
